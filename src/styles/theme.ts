@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'styled-components'
 import base from './base'
 
-const antTheme: DefaultTheme = {
+const Theme: DefaultTheme = {
   ...base,
   colors: {
     primary: '#0F370A',
@@ -10,4 +10,4 @@ const antTheme: DefaultTheme = {
   },
 }
 
-export default antTheme
+export default Theme
