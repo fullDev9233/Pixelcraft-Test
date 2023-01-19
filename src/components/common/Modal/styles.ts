@@ -14,7 +14,7 @@ export const Container = styled(FlexBox)`
   outline: 0;
   background: ${({ theme }) => theme.colors.primary};
   backdrop-filter: blur(4px);
-  z-index: 1100;
+  z-index: 100;
 `
 
 export const ModalBody = styled(FlexBox)`

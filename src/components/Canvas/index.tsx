@@ -32,7 +32,7 @@ const Canvas = ({ draw, ...props }: CanvasProps) => {
       width={width}
       height={height}
       ref={canvasRef}
-      style={{ position: 'absolute' }}
+      style={{ position: 'absolute', zIndex: 10000 }}
     />
   )
 }
