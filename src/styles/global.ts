@@ -6,11 +6,9 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: NiramitRegular;
-    font-size: 36px;
-    line-height: 46.8px;
-    background: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.primaryText};
+    font-family: Rubik;
+    font-size: 12px;
+    line-height: 1.3;
   }
   #root {
     margin: 0 auto;

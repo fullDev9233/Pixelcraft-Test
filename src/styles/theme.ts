@@ -6,7 +6,7 @@ const Theme: DefaultTheme = {
   colors: {
     primary: '#0F370A',
     secondary: 'magenta',
-    primaryText: '#FFFBD8',
+    textPrimary: '#ffd600',
   },
 }
 

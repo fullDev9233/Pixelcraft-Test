@@ -11,5 +11,5 @@ export type MediaQueries = {
 export type Colors = {
   primary: string
   secondary: string
-  primaryText: string
+  textPrimary: string
 }

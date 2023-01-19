@@ -1,9 +1,10 @@
+import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import theme from '../styles/theme'
 
 interface ProviderProps {
-  children: any
+  children: React.ReactNode
 }
 
 const Provider = ({ children }: ProviderProps) => (
