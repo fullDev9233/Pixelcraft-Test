@@ -31,6 +31,10 @@ export const ModalBody = styled.div<{ width: number; height: number }>`
   }
 `
 
+export const ModalContent = styled.div`
+  position: absolute;
+`
+
 export const SectionTop = styled.div<{ width: number; height: number }>`
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
@@ -72,13 +76,4 @@ export const SectionBottom = styled(SectionTop)`
     linear-gradient(180deg, rgba(0, 0, 0, 0.4) 17.01%, rgba(0, 0, 0, 0) 96.53%);
   opacity: 0.8;
   transform: matrix(1, 0, 0, -1, 0, 0);
-`
-
-export const TextTitle = styled.p`
-  font-family: 'Alien Encounters';
-  font-size: 42px;
-  line-height: 60px;
-  color: ${({ theme }) => theme.colors.textPrimary};
-  text-transform: uppercase;
-  text-align: center;
 `

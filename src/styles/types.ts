@@ -12,4 +12,5 @@ export type Colors = {
   primary: string
   secondary: string
   textPrimary: string
+  textSecondary: string
 }
