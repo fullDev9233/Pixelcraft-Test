@@ -9,12 +9,15 @@ import {
   ModalContent,
   SectionTop,
   SectionBottom,
+  Ul,
+  Li,
+  HDivider,
 } from './styles'
 import GotchiETH from '../../assets/imgs/GotchiETH.png'
 
-const width = 600
-const height = 600
-const height1 = 270
+const width = 704
+const height = 700
+const height1 = 330
 const lineWidth = 3
 const topColor = '#FFD600'
 const bottomColor = '#00B9E1'
@@ -35,7 +38,7 @@ const WelcomeModal = () => {
     ctx.lineJoin = 'round'
     ctx.strokeStyle = topColor
 
-    ctx.fillRect(0, 30, 10, 10)
+    ctx.fillRect(0, 38, 10, 10)
 
     ctx.beginPath()
     ctx.moveTo(0, height1 * 0.13)
@@ -46,7 +49,7 @@ const WelcomeModal = () => {
     ctx.lineTo(point5, height1 * 0.13)
     ctx.stroke()
 
-    ctx.fillRect(590, 30, 10, 10)
+    ctx.fillRect(width - 10, 38, 10, 10)
 
     // Draw the bottom curve
     ctx.fillStyle = bottomColor
@@ -56,14 +59,14 @@ const WelcomeModal = () => {
 
     ctx.beginPath()
     ctx.moveTo(0, height * 0.94)
-    ctx.lineTo(point1, height * 0.94)
-    ctx.lineTo(point2, height - lineWidth / 2)
-    ctx.lineTo(point3, height - lineWidth / 2)
-    ctx.lineTo(point4, height * 0.94)
+    ctx.lineTo(point1 - 40, height * 0.94)
+    ctx.lineTo(point2 - 40, height - lineWidth / 2)
+    ctx.lineTo(point3 + 40, height - lineWidth / 2)
+    ctx.lineTo(point4 + 40, height * 0.94)
     ctx.lineTo(point5, height * 0.94)
     ctx.stroke()
 
-    ctx.fillRect(590, height * 0.94 - 5, 10, 10)
+    ctx.fillRect(width - 10, height * 0.94 - 5, 10, 10)
   }
 
   return (
@@ -72,7 +75,7 @@ const WelcomeModal = () => {
         <ModalBody width={width} height={height}>
           <Canvas draw={drawArt} width={width} height={height} />
           <SectionTop width={width} height={height1} />
-          <div style={{ height: '60px', background: 'red' }}></div>
+          <div style={{ height: '60px' }} />
           <SectionBottom width={width} height={height1} />
         </ModalBody>
         <ModalContent>
@@ -81,23 +84,28 @@ const WelcomeModal = () => {
           <Typography
             font='PixelarRegularW01-Regular'
             fontSize={32}
-            lineHeight={32}
+            lineHeight='32px'
             color={theme.colors.textSecondary}
+            mb='32px'
           >
             The Aarena is currently full!
           </Typography>
           <FlexBox>
-            <img src={GotchiETH} alt='GotchiETH' />
+            <img
+              src={GotchiETH}
+              alt='GotchiETH'
+              style={{ marginRight: '20px' }}
+            />
             <div>
               <Typography
                 font='PixelarRegularW01-Regular'
                 fontSize={42}
-                lineHeight={39}
+                lineHeight='39px'
                 textTransform='uppercase'
                 color={theme.colors.textSecondary}
               >
                 THERE ARE&nbsp;
-                {/* <span
+                <span
                   style={{
                     fontFamily: 'PixelarRegularW01-Regular',
                     color: '#FFD600',
@@ -106,13 +114,13 @@ const WelcomeModal = () => {
                   }}
                 >
                   17
-                </span> */}
+                </span>
                 &nbsp;GOTCHIS AHEAD OF YOU
               </Typography>
               <Typography
                 font='PixelarRegularW01-Regular'
                 fontSize={30}
-                lineHeight={32}
+                lineHeight='32px'
                 textTransform='uppercase'
                 color={theme.colors.textSecondary}
               >
@@ -120,6 +128,65 @@ const WelcomeModal = () => {
               </Typography>
             </div>
           </FlexBox>
+
+          <FlexBox mt='50px'>
+            <HDivider />
+            <Typography
+              fontSize={42}
+              lineHeight='46px'
+              color={theme.colors.secondary}
+              m='0 15px'
+            >
+              Aarena Rules
+            </Typography>
+            <HDivider />
+          </FlexBox>
+
+          <Typography
+            font='PixelarRegularW01-Regular'
+            fontSize={32}
+            lineHeight='30px'
+            color={theme.colors.secondary}
+            textTransform='uppercase'
+            m='30px 0 20px 0'
+          >
+            To EXIT the Aarena with your winnings you must:
+          </Typography>
+          <Ul>
+            <Li>
+              <Typography
+                font='PixelarRegularW01-Regular'
+                fontSize={28}
+                lineHeight='26px'
+                color={theme.colors.textSecondary}
+                textAlign='left'
+              >
+                Defeat at least 1 gotchi
+              </Typography>
+            </Li>
+            <Li>
+              <Typography
+                font='PixelarRegularW01-Regular'
+                fontSize={28}
+                lineHeight='26px'
+                color={theme.colors.textSecondary}
+                textAlign='left'
+              >
+                Survive for at least 3 minutes
+              </Typography>
+            </Li>
+          </Ul>
+          <Typography
+            font='PixelarRegularW01-Regular'
+            fontSize={28}
+            lineHeight='26px'
+            color={theme.colors.textPrimary}
+            mt='50px'
+          >
+            EXITING WITHOUT MEETING THESE CRITERIA
+            <br />
+            WILL FORFEIT ALL YOUR WINNINGS!
+          </Typography>
         </ModalContent>
       </ModalContainer>
     </Modal>

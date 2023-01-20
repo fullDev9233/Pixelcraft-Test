@@ -5,12 +5,23 @@ import { Container } from './styles'
 const Dashboard = () => {
   const [isOpenedModal, setIsOpenedModal] = useState(false)
 
-  const handleOpen = () => {
+  const handleChange = () => {
     setIsOpenedModal(true)
   }
+
   return (
     <Container>
-      <button onClick={handleOpen}>Open</button>
+      <button
+        style={{
+          margin: '20px',
+          padding: '12px 24px',
+          fontSize: '16px',
+          cursor: 'pointer',
+        }}
+        onClick={handleChange}
+      >
+        Open
+      </button>
       {isOpenedModal && <WelcomeModal />}
     </Container>
   )

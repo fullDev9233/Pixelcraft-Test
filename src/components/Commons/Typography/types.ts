@@ -13,7 +13,7 @@ export interface TypographyProps
   font?: string
   color?: string
   fontSize?: number
-  lineHeight?: number
+  lineHeight?: string
   textTransform?: string
   textAlign?: 'left' | 'center' | 'right'
 }

@@ -10,7 +10,7 @@ import { TypographyProps } from './types'
 const Typography = styled.p<TypographyProps>`
   font-family: ${({ font }) => font || 'Alien Encounters'};
   font-size: ${({ fontSize }) => fontSize || 56}px;
-  line-height: ${({ lineHeight }) => lineHeight || 60}px;
+  line-height: ${({ lineHeight }) => lineHeight || '60px'};
   color: ${({ color, theme }) => color || theme.colors.textPrimary};
   text-transform: ${({ textTransform }) => textTransform || 'inherit'};
   text-align: ${({ textAlign }) => textAlign || 'center'};
