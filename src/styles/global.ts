@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import AlienEncountersBold from '../assets/fonts/Alien-Encounters-Bold.ttf'
 import AlienEncountersRegular from '../assets/fonts/Alien-Encounters-Regular.ttf'
+import PixelarRegularW01Regular from '../assets/fonts/Pixelar-Regular-W01-Regular.ttf'
 
 export default createGlobalStyle`
   @font-face {
@@ -14,6 +15,13 @@ export default createGlobalStyle`
     font-family: 'Alien Encounters Bold';
     src: url(${AlienEncountersBold}) format('truetype');
     font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PixelarRegularW01-Regular';
+    src: url(${PixelarRegularW01Regular}) format('truetype');
+    font-weight: 400;
     font-style: normal;
   }
 
