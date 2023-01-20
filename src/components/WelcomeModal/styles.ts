@@ -1,10 +1,34 @@
 import styled from 'styled-components'
 
+export const ModalContainer = styled.div`
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  z-index: 1100;
+`
+
 export const ModalBody = styled.div<{ width: number; height: number }>`
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: ${({ width }) => width || 600}px;
   height: ${({ height }) => height || 600}px;
-  background: #fff;
+  max-width: fit-content;
+  transition: transform 0.3s ease-out;
+  transform: none;
+
+  ${({ theme }) => theme.mediaQueries.md} {
+    width: 600px;
+  }
 `
 
 export const SectionTop = styled.div<{ width: number; height: number }>`

@@ -1,19 +1,18 @@
-import { useState } from 'react'
+import { lazy, Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import GlobalStyle from './styles/global'
-import WelcomeModal from './components/WelcomeModal'
+
+const DashBoard = lazy(() => import('./pages/Dashboard'))
 
 const App = () => {
-  const [isOpenedModal, setIsOpenedModal] = useState(false)
-
-  const handleOpen = () => {
-    setIsOpenedModal(true)
-  }
-
   return (
     <>
       <GlobalStyle />
-      <button onClick={handleOpen}>Open</button>
-      {isOpenedModal && <WelcomeModal />}
+      <Suspense fallback={<div>...Loading</div>}>
+        <Routes>
+          <Route path='/' element={<DashBoard />} />
+        </Routes>
+      </Suspense>
     </>
   )
 }

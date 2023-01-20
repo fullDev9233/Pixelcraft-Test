@@ -1,6 +1,12 @@
-import Modal from '../common/Modal'
+import Modal from '../Commons/Modal'
 import Canvas from '../Canvas'
-import { ModalBody, SectionTop, SectionBottom, TextTitle } from './styles'
+import {
+  ModalContainer,
+  ModalBody,
+  SectionTop,
+  SectionBottom,
+  TextTitle,
+} from './styles'
 
 const width = 600
 const height = 600
@@ -56,12 +62,14 @@ const WelcomeModal = () => {
 
   return (
     <Modal wrapperId='welcome-modal'>
-      <ModalBody width={width} height={height}>
-        <Canvas draw={drawArt} width={width} height={height} />
-        <SectionTop width={width} height={height1} />
-        <div style={{ height: '60px', background: 'red' }}></div>
-        <SectionBottom width={width} height={height1} />
-      </ModalBody>
+      <ModalContainer>
+        <ModalBody width={width} height={height}>
+          <Canvas draw={drawArt} width={width} height={height} />
+          <SectionTop width={width} height={height1} />
+          <div style={{ height: '60px', background: 'red' }}></div>
+          <SectionBottom width={width} height={height1} />
+        </ModalBody>
+      </ModalContainer>
     </Modal>
   )
 }
