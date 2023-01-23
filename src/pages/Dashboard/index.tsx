@@ -1,28 +1,29 @@
 import { useState } from 'react'
+import FlexBox from '../../components/Commons/FlexBox'
+import GalleryModal from '../../components/GalleryModal'
 import WelcomeModal from '../../components/WelcomeModal'
-import { Container } from './styles'
+import { Container, Button } from './styles'
 
 const Dashboard = () => {
-  const [isOpenedModal, setIsOpenedModal] = useState(false)
+  const [isOpenedWelcomeModal, setIsOpenedWelcomeModal] = useState(false)
+  const [isOpenedGalleryModal, setIsOpenedGalleryModal] = useState(false)
 
-  const handleChange = () => {
-    setIsOpenedModal(true)
+  const handleChange1 = () => {
+    setIsOpenedWelcomeModal(true)
+  }
+
+  const handleChange2 = () => {
+    setIsOpenedGalleryModal(true)
   }
 
   return (
     <Container>
-      <button
-        style={{
-          margin: '20px',
-          padding: '12px 24px',
-          fontSize: '16px',
-          cursor: 'pointer',
-        }}
-        onClick={handleChange}
-      >
-        Open
-      </button>
-      {isOpenedModal && <WelcomeModal />}
+      <FlexBox style={{ justifyContent: 'space-between' }}>
+        <Button onClick={handleChange1}>Welcome Modal</Button>
+        <Button onClick={handleChange2}>Gallery Modal</Button>
+      </FlexBox>
+      {isOpenedWelcomeModal && <WelcomeModal />}
+      {isOpenedGalleryModal && <GalleryModal />}
     </Container>
   )
 }

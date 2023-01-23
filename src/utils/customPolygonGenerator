@@ -1,0 +1,7 @@
+const customPolygonGenerator = () => {
+  const customPolygon = `-webkit-clip-path: polygon(0% 4%, 7% 5%, 7% 0%, 93% 0%, 93% 5%, 100% 4%, 100% 93%, 94% 93%, 94% 100%, 8% 99%, 9% 92%, 0% 92%);
+clip-path: polygon(0% 4%, 7% 5%, 7% 0%, 93% 0%, 93% 5%, 100% 4%, 100% 93%, 94% 93%, 94% 100%, 8% 99%, 9% 92%, 0% 92%);`
+  return customPolygon
+}
+
+export default customPolygonGenerator

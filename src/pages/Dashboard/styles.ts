@@ -7,3 +7,10 @@ export const Container = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 `
+
+export const Button = styled.button`
+  margin: 20px;
+  padding: 12px 24px;
+  fontsize: 16px;
+  cursor: pointer;
+`

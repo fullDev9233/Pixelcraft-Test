@@ -3,8 +3,8 @@ import Canvas from '../Canvas'
 import FlexBox from '../Commons/FlexBox'
 import Modal from '../Commons/Modal'
 import Typography from '../Commons/Typography'
+import { ModalContainer } from '../Commons/Modal/styles'
 import {
-  ModalContainer,
   ModalBody,
   ModalContent,
   SectionTop,
