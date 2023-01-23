@@ -1,7 +1,7 @@
 import { useTheme } from 'styled-components'
 import FlexBox from '../Commons/FlexBox'
 import Typography from '../Commons/Typography'
-import { ButtonWrapper, Button } from '../Commons/Button/styles'
+import Button from '../Commons/Button'
 import { Card, CardBody } from '../GalleryModal/styles'
 import { ItemLevel, AvatarWrapper, AvatarInnerWrapper } from './styles'
 import AvatarImg from '../../assets/imgs/avatar.png'
@@ -52,18 +52,13 @@ const ItemCard = () => {
           </AvatarInnerWrapper>
         </AvatarWrapper>
       </CardBody>
-      <ButtonWrapper>
-        <Button>
-          <Typography
-            font='PixelarRegularW01-Regular'
-            fontSize={40}
-            lineHeight='37px'
-            color={theme.colors.textSecondary}
-          >
-            Channel Alchemica
-          </Typography>
-        </Button>
-      </ButtonWrapper>
+      <Button
+        title='Channel Alchemica'
+        borderColor={theme.colors.buttonBorder1}
+        buttonBg={theme.colors.buttonBg1}
+        buttonInnerTopBorder={theme.colors.buttonInnerTopBorder1}
+        buttonInnerBottomBorder={theme.colors.buttonInnerBottomBorder1}
+      />
       <FlexBox>
         <img src={ChannelImg} alt='Channel' />
         <Typography

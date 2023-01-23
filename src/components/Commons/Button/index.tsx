@@ -2,19 +2,38 @@ import { useTheme } from 'styled-components'
 import Typography from '../Typography'
 import { ButtonWrapper, Button as StyledButton } from './styles'
 
-const Button = () => {
+interface ButtonProps {
+  title: string
+  borderColor: string
+  buttonBg: string
+  buttonInnerTopBorder: string
+  buttonInnerBottomBorder: string
+}
+
+const Button = ({
+  title,
+  borderColor,
+  buttonBg,
+  buttonInnerTopBorder,
+  buttonInnerBottomBorder,
+}: ButtonProps) => {
   const theme = useTheme()
 
   return (
-    <ButtonWrapper>
-      <StyledButton>
+    <ButtonWrapper borderColor={borderColor}>
+      <StyledButton
+        buttonBg={buttonBg}
+        buttonInnerTopBorder={buttonInnerTopBorder}
+        buttonInnerBottomBorder={buttonInnerBottomBorder}
+      >
         <Typography
           font='PixelarRegularW01-Regular'
           fontSize={40}
           lineHeight='37px'
           color={theme.colors.textSecondary}
+          mt='-6px'
         >
-          Channel Alchemica
+          {title}
         </Typography>
       </StyledButton>
     </ButtonWrapper>

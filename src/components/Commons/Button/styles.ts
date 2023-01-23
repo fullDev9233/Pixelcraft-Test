@@ -4,17 +4,20 @@ const clipPath1 = `polygon(0% 8%, 2% 8%, 2% 0%, 98% 0%, 98% 8%, 100% 8%, 100% 92
 
 const clipPath2 = `polygon(0% 85%, 97% 85%, 97% 12%, 100% 12%, 100% 100%, 0% 100%)`
 
-export const ButtonWrapper = styled.div`
-  position: relative;
+export const ButtonWrapper = styled.div<{ borderColor: string }>`
   width: 100%;
   height: 80px;
   margin: 45px 0 16px;
-  background: ${({ theme }) => theme.colors.buttonBorder1};
+  background: ${({ borderColor }) => borderColor};
   -webkit-clip-path: ${clipPath1};
   clip-path: ${clipPath1};
 `
 
-export const Button = styled.button`
+export const Button = styled.button<{
+  buttonBg: string
+  buttonInnerTopBorder: string
+  buttonInnerBottomBorder: string
+}>`
   position: relative;
   top: 8%;
   left: 2%;
@@ -23,7 +26,7 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${({ theme }) => theme.colors.buttonBg1};
+  background: ${({ buttonBg }) => buttonBg};
   border: none;
   &::before {
     content: '';
@@ -33,7 +36,7 @@ export const Button = styled.button`
     left: 0;
     width: 100%;
     height: 8px;
-    background: ${({ theme }) => theme.colors.buttonInnerTopBorder1};
+    background: ${({ buttonInnerTopBorder }) => buttonInnerTopBorder};
   }
   &::after {
     content: '';
@@ -43,7 +46,7 @@ export const Button = styled.button`
     left: 0;
     width: 100%;
     height: 67.2px;
-    background: ${({ theme }) => theme.colors.buttonInnerBottomBorder1};
+    background: ${({ buttonInnerBottomBorder }) => buttonInnerBottomBorder};
     -webkit-clip-path: ${clipPath2};
     clip-path: ${clipPath2};
   }

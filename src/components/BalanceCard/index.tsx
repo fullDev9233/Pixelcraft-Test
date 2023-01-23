@@ -1,7 +1,7 @@
 import { useTheme } from 'styled-components'
 import FlexBox from '../Commons/FlexBox'
 import Typography from '../Commons/Typography'
-import { ButtonWrapper, Button } from '../Commons/Button/styles'
+import Button from '../Commons/Button'
 import { Card, CardBody } from '../GalleryModal/styles'
 import { BalanceInfo, CollectionWrapper, RemainingWrapper } from './styles'
 import formatNumbers from '../../utils/formatNumbers'
@@ -130,18 +130,13 @@ const BalanceCard = () => {
           </RemainingWrapper>
         </BalanceInfo>
       </CardBody>
-      <ButtonWrapper>
-        <Button>
-          <Typography
-            font='PixelarRegularW01-Regular'
-            fontSize={40}
-            lineHeight='37px'
-            color={theme.colors.textSecondary}
-          >
-            Channel Alchemica
-          </Typography>
-        </Button>
-      </ButtonWrapper>
+      <Button
+        title='Empty Reservoirs'
+        borderColor={theme.colors.buttonBorder2}
+        buttonBg={theme.colors.border}
+        buttonInnerTopBorder={theme.colors.buttonInnerTopBorder2}
+        buttonInnerBottomBorder={theme.colors.buttonInnerBottomBorder2}
+      />
       <FlexBox>
         <img src={ChannelImg} alt='Channel' />
         <Typography
