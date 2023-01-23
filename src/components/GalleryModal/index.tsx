@@ -3,6 +3,7 @@ import FlexBox from '../Commons/FlexBox'
 import Modal from '../Commons/Modal'
 import Typography from '../Commons/Typography'
 import ItemCard from '../ItemCard'
+import BalanceCard from '../BalanceCard'
 import { ModalContainer } from '../Commons/Modal/styles'
 import { ModalBody, ModalContent, ModalTitle } from './styles'
 import LockImg from '../../assets/imgs/lock.png'
@@ -53,7 +54,7 @@ const GalleryModal = () => {
               </FlexBox>
               <ItemCard />
             </section>
-            <div>hello world</div>
+            <BalanceCard />
             <div>hello world</div>
           </ModalContent>
         </ModalBody>

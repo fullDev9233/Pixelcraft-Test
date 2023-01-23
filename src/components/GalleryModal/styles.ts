@@ -42,9 +42,12 @@ export const ModalTitle = styled(FlexBox)`
   z-index: 20000;
 `
 
-export const Card = styled(FlexBox)`
+export const Card = styled.div`
+  margin-top: 110px;
+`
+
+export const CardBody = styled(FlexBox)`
   position: relative;
   flex-direction: column;
   height: 320px;
-  margin-top: 110px;
 `

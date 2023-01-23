@@ -26,4 +26,6 @@ export type Colors = {
   buttonInnerBottomBorder3: string
   textPrimary: string
   textSecondary: string
+  textChannel: string
+  textCollection: string
 }

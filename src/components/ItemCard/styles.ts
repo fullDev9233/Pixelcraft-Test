@@ -4,7 +4,7 @@ import customPolygonGenerator from '../../utils/customPolygonGenerator'
 
 export const ItemLevel = styled(FlexBox)`
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 0;
   flex-direction: column;
   width: 60px;
@@ -21,6 +21,7 @@ export const AvatarWrapper = styled(FlexBox)<{ width: number; height: number }>`
   flex-direction: column;
   width: ${({ width }) => width}px;
   height: ${({ height }) => height}px;
+  margin-top: 44px;
   -webkit-clip-path: ${customPolygonGenerator()};
   clip-path: ${customPolygonGenerator()};
   background: ${({ theme }) => theme.colors.border};
@@ -32,6 +33,7 @@ export const AvatarInnerWrapper = styled(AvatarWrapper)`
   left: 1.5px;
   width: ${({ width }) => width - 3}px;
   height: ${({ height }) => height - 3}px;
+  margin-top: 0;
   background: linear-gradient(
       180deg,
       rgba(200, 42, 194, 0.4) 0%,

@@ -21,6 +21,8 @@ const Theme: DefaultTheme = {
     buttonInnerBottomBorder3: '#008DCA',
     textPrimary: '#ffd600',
     textSecondary: '#fff',
+    textChannel: '#A065FF',
+    textCollection: '#FF7BFB',
   },
 }
 
