@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import FlexBox from '../Commons/FlexBox'
+import customPolygonGenerator from '../../utils/customPolygonGenerator'
 
 export const ModalBody = styled.div<{ width: number; height: number }>`
   position: relative;
@@ -10,34 +11,8 @@ export const ModalBody = styled.div<{ width: number; height: number }>`
   height: ${({ height }) => height || 600}px;
   transition: transform 0.3s ease-out;
   transform: none;
-  -webkit-clip-path: polygon(
-    0% 3%,
-    1.8% 3%,
-    1.8% 0%,
-    98.2% 0%,
-    98.2% 3%,
-    100% 3%,
-    100% 97%,
-    98.2% 97%,
-    98.2% 100%,
-    1.8% 100%,
-    1.8% 97%,
-    0% 97%
-  );
-  clip-path: polygon(
-    0% 3%,
-    2% 3%,
-    2% 0%,
-    98% 0%,
-    98% 3%,
-    100% 3%,
-    100% 97%,
-    98% 97%,
-    98% 100%,
-    2% 100%,
-    2% 97%,
-    0% 97%
-  );
+  -webkit-clip-path: ${customPolygonGenerator()};
+  clip-path: ${customPolygonGenerator()};
   background: ${({ theme }) => theme.colors.border};
 
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -67,6 +42,9 @@ export const ModalTitle = styled(FlexBox)`
   z-index: 20000;
 `
 
-export const Card = styled.div`
-  margin-top: 100px;
+export const Card = styled(FlexBox)`
+  position: relative;
+  flex-direction: column;
+  height: 320px;
+  margin-top: 110px;
 `

@@ -2,8 +2,9 @@ import { useTheme } from 'styled-components'
 import FlexBox from '../Commons/FlexBox'
 import Modal from '../Commons/Modal'
 import Typography from '../Commons/Typography'
+import ItemCard from '../ItemCard'
 import { ModalContainer } from '../Commons/Modal/styles'
-import { ModalBody, ModalContent, ModalTitle, Card } from './styles'
+import { ModalBody, ModalContent, ModalTitle } from './styles'
 import LockImg from '../../assets/imgs/lock.png'
 
 const width = 1200
@@ -50,7 +51,7 @@ const GalleryModal = () => {
                   Rights
                 </Typography>
               </FlexBox>
-              <Card>hello world</Card>
+              <ItemCard />
             </section>
             <div>hello world</div>
             <div>hello world</div>
