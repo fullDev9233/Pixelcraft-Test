@@ -32,7 +32,7 @@ export const ModalContent = styled(ModalBody)`
 
 export const ModalTitle = styled(FlexBox)`
   position: absolute;
-  top: 5px;
+  top: calc((100vh - 668px) / 2 - 48px);
   width: 568px;
   height: 100px;
   background: #000000;
